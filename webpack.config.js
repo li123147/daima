@@ -8,12 +8,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "index.[contenthash].js", //filename:出口
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: "新垣结衣",
-      template: "src/assets/index.html"
-    }),
-      module: {
+  module: {
     rules: [
       {
         test: /\.css$/i,
@@ -21,5 +16,10 @@ module.exports = {
       },
     ],
   },
-  ],
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: "新垣结衣",
+      template: "src/assets/index.html"
+    })
+  ]
 };
